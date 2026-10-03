@@ -1,0 +1,426 @@
+[gd_scene format=3 uid="uid://dsj8d5j50vhl1"]
+
+[ext_resource type="Texture2D" uid="uid://byqtxy4lfsdhg" path="res://Balls1.png" id="1_tger7"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tger7"]
+friction = 0.2
+bounce = 0.05
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0ystb"]
+radius = 15.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0ystb"]
+friction = 0.1
+bounce = 0.05
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ru48t"]
+radius = 15.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ru48t"]
+friction = 0.1
+bounce = 0.05
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q2ish"]
+radius = 15.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_q2ish"]
+friction = 0.1
+bounce = 0.05
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tger7"]
+radius = 15.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_00gfa"]
+friction = 0.1
+bounce = 0.05
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_00gfa"]
+radius = 15.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_wd4np"]
+friction = 0.1
+bounce = 0.05
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wd4np"]
+radius = 15.033297
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xewfi"]
+friction = 0.1
+bounce = 0.05
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xewfi"]
+radius = 15.132746
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mk0oh"]
+friction = 0.1
+bounce = 0.05
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mk0oh"]
+radius = 15.033297
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fea17"]
+friction = 0.1
+bounce = 0.05
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fea17"]
+radius = 15.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pdigv"]
+friction = 0.1
+bounce = 0.05
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pdigv"]
+radius = 15.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_hgt4v"]
+friction = 0.1
+bounce = 0.05
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hgt4v"]
+radius = 15.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ure6q"]
+friction = 0.1
+bounce = 0.05
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ure6q"]
+radius = 15.033297
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_iqxf3"]
+friction = 0.1
+bounce = 0.05
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iqxf3"]
+radius = 15.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tmleo"]
+friction = 0.1
+bounce = 0.05
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tmleo"]
+radius = 15.033297
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7jwt4"]
+friction = 0.1
+bounce = 0.05
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7jwt4"]
+radius = 15.0
+
+[node name="balls" type="Node2D" unique_id=141635420]
+position = Vector2(332, 121)
+
+[node name="1ball" type="RigidBody2D" parent="." unique_id=1441929661]
+position = Vector2(0, 2)
+mass = 0.17
+physics_material_override = SubResource("PhysicsMaterial_tger7")
+gravity_scale = 0.0
+can_sleep = false
+freeze_mode = 1
+linear_damp = 0.5
+angular_damp = 1.0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="1ball" unique_id=1660068882]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_tger7")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="1ball" unique_id=589775032]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_0ystb")
+
+[node name="2ball" type="RigidBody2D" parent="." unique_id=486558212]
+position = Vector2(-11, 21)
+mass = 0.17
+physics_material_override = SubResource("PhysicsMaterial_0ystb")
+gravity_scale = 0.0
+can_sleep = false
+freeze_mode = 1
+linear_damp = 0.5
+angular_damp = 1.0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="2ball" unique_id=489842119]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_tger7")
+region_enabled = true
+region_rect = Rect2(32, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2ball" unique_id=991386083]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_ru48t")
+
+[node name="1ballstriped" type="RigidBody2D" parent="." unique_id=1336548419]
+position = Vector2(11, 21)
+mass = 0.17
+physics_material_override = SubResource("PhysicsMaterial_ru48t")
+gravity_scale = 0.0
+can_sleep = false
+freeze_mode = 1
+linear_damp = 0.5
+angular_damp = 0.1
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="1ballstriped" unique_id=846430196]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_tger7")
+region_enabled = true
+region_rect = Rect2(96, 32, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="1ballstriped" unique_id=1763266039]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_q2ish")
+
+[node name="2ballstriped" type="RigidBody2D" parent="." unique_id=1900656883]
+position = Vector2(-22, 40)
+mass = 0.17
+physics_material_override = SubResource("PhysicsMaterial_q2ish")
+gravity_scale = 0.0
+can_sleep = false
+freeze_mode = 1
+linear_damp = 0.5
+angular_damp = 0.1
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="2ballstriped" unique_id=1515087491]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_tger7")
+region_enabled = true
+region_rect = Rect2(128, 32, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2ballstriped" unique_id=1136829168]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_tger7")
+
+[node name="8ball" type="RigidBody2D" parent="." unique_id=1328049958]
+position = Vector2(0, 40)
+mass = 0.17
+physics_material_override = SubResource("PhysicsMaterial_00gfa")
+gravity_scale = 0.0
+can_sleep = false
+freeze_mode = 1
+linear_damp = 0.5
+angular_damp = 0.1
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="8ball" unique_id=872589288]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_tger7")
+region_enabled = true
+region_rect = Rect2(64, 32, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="8ball" unique_id=23972027]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_00gfa")
+
+[node name="3ball" type="RigidBody2D" parent="." unique_id=979945428]
+position = Vector2(22, 40)
+mass = 0.17
+physics_material_override = SubResource("PhysicsMaterial_wd4np")
+gravity_scale = 0.0
+can_sleep = false
+freeze_mode = 1
+linear_damp = 0.5
+angular_damp = 0.1
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="3ball" unique_id=1582362478]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_tger7")
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="3ball" unique_id=249940481]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_wd4np")
+
+[node name="3ballstriped" type="RigidBody2D" parent="." unique_id=1934026453]
+position = Vector2(-33, 59)
+mass = 0.17
+physics_material_override = SubResource("PhysicsMaterial_xewfi")
+gravity_scale = 0.0
+can_sleep = false
+freeze_mode = 1
+linear_damp = 0.5
+angular_damp = 0.1
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="3ballstriped" unique_id=1799351008]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_tger7")
+region_enabled = true
+region_rect = Rect2(0, 64, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="3ballstriped" unique_id=120356975]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_xewfi")
+
+[node name="4ball" type="RigidBody2D" parent="." unique_id=1621979565]
+position = Vector2(-11, 59)
+mass = 0.17
+physics_material_override = SubResource("PhysicsMaterial_mk0oh")
+gravity_scale = 0.0
+can_sleep = false
+freeze_mode = 1
+linear_damp = 0.5
+angular_damp = 0.1
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="4ball" unique_id=1224556783]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_tger7")
+region_enabled = true
+region_rect = Rect2(96, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="4ball" unique_id=2141643448]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_mk0oh")
+
+[node name="4ballstriped" type="RigidBody2D" parent="." unique_id=562917343]
+position = Vector2(11, 59)
+mass = 0.17
+physics_material_override = SubResource("PhysicsMaterial_fea17")
+gravity_scale = 0.0
+can_sleep = false
+freeze_mode = 1
+linear_damp = 0.5
+angular_damp = 0.1
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="4ballstriped" unique_id=703258213]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_tger7")
+region_enabled = true
+region_rect = Rect2(32, 64, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="4ballstriped" unique_id=1440496293]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_fea17")
+
+[node name="5ball" type="RigidBody2D" parent="." unique_id=1630452392]
+position = Vector2(33, 59)
+mass = 0.17
+physics_material_override = SubResource("PhysicsMaterial_pdigv")
+gravity_scale = 0.0
+can_sleep = false
+freeze_mode = 1
+linear_damp = 0.5
+angular_damp = 0.1
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="5ball" unique_id=875243531]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_tger7")
+region_enabled = true
+region_rect = Rect2(128, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="5ball" unique_id=906224256]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_pdigv")
+
+[node name="5ballstriped" type="RigidBody2D" parent="." unique_id=692829360]
+position = Vector2(-44, 78)
+mass = 0.17
+physics_material_override = SubResource("PhysicsMaterial_hgt4v")
+gravity_scale = 0.0
+can_sleep = false
+freeze_mode = 1
+linear_damp = 0.5
+angular_damp = 0.1
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="5ballstriped" unique_id=1502013972]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_tger7")
+region_enabled = true
+region_rect = Rect2(64, 64, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="5ballstriped" unique_id=1278096714]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_hgt4v")
+
+[node name="6ball" type="RigidBody2D" parent="." unique_id=700914455]
+position = Vector2(-22, 78)
+mass = 0.17
+physics_material_override = SubResource("PhysicsMaterial_ure6q")
+gravity_scale = 0.0
+can_sleep = false
+freeze_mode = 1
+linear_damp = 0.5
+angular_damp = 0.1
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="6ball" unique_id=918661815]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_tger7")
+region_enabled = true
+region_rect = Rect2(0, 32, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="6ball" unique_id=31295854]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_ure6q")
+
+[node name="6ballstriped" type="RigidBody2D" parent="." unique_id=1521545674]
+position = Vector2(0, 78)
+mass = 0.17
+physics_material_override = SubResource("PhysicsMaterial_iqxf3")
+gravity_scale = 0.0
+can_sleep = false
+freeze_mode = 1
+linear_damp = 0.5
+angular_damp = 0.1
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="6ballstriped" unique_id=1573240243]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_tger7")
+region_enabled = true
+region_rect = Rect2(96, 64, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="6ballstriped" unique_id=337525418]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_iqxf3")
+
+[node name="7ball" type="RigidBody2D" parent="." unique_id=332606840]
+position = Vector2(22, 78)
+mass = 0.17
+physics_material_override = SubResource("PhysicsMaterial_tmleo")
+gravity_scale = 0.0
+can_sleep = false
+freeze_mode = 1
+linear_damp = 0.5
+angular_damp = 0.1
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="7ball" unique_id=295551443]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_tger7")
+region_enabled = true
+region_rect = Rect2(32, 32, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="7ball" unique_id=1988010560]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_tmleo")
+
+[node name="7ballstriped" type="RigidBody2D" parent="." unique_id=284022824]
+position = Vector2(44, 78)
+mass = 0.17
+physics_material_override = SubResource("PhysicsMaterial_7jwt4")
+gravity_scale = 0.0
+can_sleep = false
+freeze_mode = 1
+linear_damp = 0.5
+angular_damp = 0.1
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="7ballstriped" unique_id=1957470067]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_tger7")
+region_enabled = true
+region_rect = Rect2(128, 64, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="7ballstriped" unique_id=1843466005]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_7jwt4")

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://d0of2771emp2"]
+
+[ext_resource type="Texture2D" uid="uid://byqtxy4lfsdhg" path="res://Balls1.png" id="1_ivl1m"]
+[ext_resource type="Script" uid="uid://b60ebwkh2y28o" path="res://hitball.gd" id="1_w87mi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w87mi"]
+radius = 15.033297
+
+[node name="hitball" type="RigidBody2D" unique_id=1221986528]
+gravity_scale = 0.0
+script = ExtResource("1_w87mi")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1128956559]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_ivl1m")
+region_enabled = true
+region_rect = Rect2(64, 96, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=945235791]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_w87mi")
