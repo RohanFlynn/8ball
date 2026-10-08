@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://dvjh4li3w84jj"]
-
-[ext_resource type="Script" uid="uid://cbv232d51t6a0" path="res://stick.gd" id="1_agfe5"]
-
-[node name="stick" type="Line2D" unique_id=2658877 groups=["stick"]]
-points = PackedVector2Array(0, 25, 0, 150)
-script = ExtResource("1_agfe5")

@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://dsj8d5j50vhl1" path="res://balls.tscn" id="2_gqlua"]
 [ext_resource type="PackedScene" uid="uid://d0of2771emp2" path="res://hitball.tscn" id="3_i4skc"]
 [ext_resource type="Script" uid="uid://c5od67mp21fug" path="res://out.gd" id="4_woq0j"]
-[ext_resource type="PackedScene" uid="uid://dvjh4li3w84jj" path="res://stick.tscn" id="5_jryfu"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jryfu"]
 friction = 0.0
@@ -854,6 +853,3 @@ shape = SubResource("CircleShape2D_i4skc")
 [node name="6" type="CollisionShape2D" parent="out" unique_id=506304912]
 position = Vector2(280, -455)
 shape = SubResource("CircleShape2D_i4skc")
-
-[node name="stick" parent="." unique_id=2658877 instance=ExtResource("5_jryfu")]
-position = Vector2(575, 612)
