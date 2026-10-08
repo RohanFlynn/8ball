@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-var can = false
+var can = true
 var aiming = false
 
 func _physics_process(delta: float) -> void:
@@ -22,4 +22,4 @@ func _input(event):
 func shootball(mp):
 	var direction = global_position - mp
 	apply_central_impulse(direction)
-	aiming = false
+	get_tree().call_group("stick", "rel", global_position)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0of2771emp2"]
+[gd_scene format=3 uid="uid://d0of2771emp2"]
 
 [ext_resource type="Texture2D" uid="uid://byqtxy4lfsdhg" path="res://Balls1.png" id="1_ivl1m"]
 [ext_resource type="Script" uid="uid://b60ebwkh2y28o" path="res://hitball.gd" id="1_w87mi"]
@@ -10,7 +10,7 @@ bounce = 0.65
 [sub_resource type="CircleShape2D" id="CircleShape2D_w87mi"]
 radius = 15.033297
 
-[node name="hitball" type="RigidBody2D"]
+[node name="hitball" type="RigidBody2D" unique_id=1475619906]
 input_pickable = true
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_w87mi")
@@ -22,12 +22,12 @@ angular_damp = 0.1
 script = ExtResource("1_w87mi")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=382528160]
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_ivl1m")
 region_enabled = true
 region_rect = Rect2(64, 96, 32, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1623682022]
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_w87mi")
