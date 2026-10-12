@@ -19,6 +19,10 @@ run/main_scene="res://pool_game.tscn"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameData="*uid://bw5vetxmoq5s1"
+
 [display]
 
 window/stretch/mode="canvas_items"
@@ -30,6 +34,11 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 [global_group]
 
 stick=""
+b=""
+s=""
+8ball=""
+starters=""
+notification=""
 
 [physics]
 

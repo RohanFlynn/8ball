@@ -1,44 +1,58 @@
 extends RigidBody2D
 
+var cancan = false
 var can = true
 var aiming = false
 var shot = false
 var bshot = false
 var lp = Vector2()
 var mp = Vector2()
+var player = GameData.player
+var shown = false
 @onready var line: Line2D = $powerline
 @onready var line2: Line2D = $Line2D
 
 func _physics_process(delta: float) -> void:
-	if linear_velocity.length() < 1.0:
-		can = true
-	else:
-		can = false
-	if aiming:
-		line.points[1] = get_local_mouse_position()
-		line2.points[1] = (get_local_mouse_position() * -1)
-	elif bshot:
-		line2.points[1] = Vector2(0, 0)
-		if line.points[1].length() > 1:
-			line.points[1] -= lp / 10
+	if cancan:
+		if linear_velocity.length() < 1.0:
+			if player == 0 and can == false:
+				GameData.player = 1
+				player = GameData.player
+			elif player == 1 and can == false:
+				GameData.player = 0
+				player = GameData.player
+			if not shown:
+				get_tree().call_group("notification", "notify", player)
+				shown = true
+			can = true
 		else:
-			line.points[1] = Vector2.ZERO
-			shot = true
-			if shot:
-				shootball(mp)
+			can = false
+		if aiming:
+			line.points[1] = get_local_mouse_position()
+			line2.points[1] = (get_local_mouse_position() * -1)
+		elif bshot:
+			line2.points[1] = Vector2(0, 0)
+			if line.points[1].length() > 1:
+				line.points[1] -= lp / 10
+			else:
+				line.points[1] = Vector2.ZERO
+				shot = true
+				if shot:
+					shootball(mp)
 
 func _input(event):
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT:
-			if event.pressed and can:
-				if event.global_position.distance_to(global_position) <= 30:
-					aiming = true
-			else:
-				if aiming:
-					aiming = false
-					bshot = true
-					lp = line.points[1]
-					mp = event.global_position
+	if cancan:
+		if event is InputEventMouseButton:
+			if event.button_index == MOUSE_BUTTON_LEFT:
+				if event.pressed and can:
+					if event.global_position.distance_to(global_position) <= 30:
+						aiming = true
+				else:
+					if aiming:
+						aiming = false
+						bshot = true
+						lp = line.points[1]
+						mp = event.global_position
 					
 func shootball(mp):
 	shot = false
@@ -46,3 +60,7 @@ func shootball(mp):
 	var direction = global_position - mp
 	apply_central_impulse(direction)
 	get_tree().call_group("stick", "rel", global_position)
+	shown = false
+
+func start():
+	cancan = true

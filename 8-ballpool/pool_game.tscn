@@ -1,9 +1,15 @@
 [gd_scene format=4 uid="uid://c003vnh5bhg8i"]
 
 [ext_resource type="Texture2D" uid="uid://n05jxr5rfh3w" path="res://Table and Cue Stick.png" id="1_hrwhm"]
+[ext_resource type="Texture2D" uid="uid://drvp6x377ifhw" path="res://poolbg.png" id="1_ufhab"]
 [ext_resource type="PackedScene" uid="uid://dsj8d5j50vhl1" path="res://balls.tscn" id="2_gqlua"]
 [ext_resource type="PackedScene" uid="uid://d0of2771emp2" path="res://hitball.tscn" id="3_i4skc"]
 [ext_resource type="Script" uid="uid://c5od67mp21fug" path="res://out.gd" id="4_woq0j"]
+[ext_resource type="Script" uid="uid://wkugpx5xr4q8" path="res://start_b.gd" id="5_jryfu"]
+[ext_resource type="Script" uid="uid://bwwofod46xxga" path="res://texture_rect.gd" id="5_ogrcx"]
+[ext_resource type="Script" uid="uid://c6n31w0o4axw1" path="res://starttitle.gd" id="6_mrpvw"]
+[ext_resource type="Script" uid="uid://cdmanwry6nv8b" path="res://notif.gd" id="9_qi0jn"]
+[ext_resource type="Script" uid="uid://dy157owxmarn6" path="res://Lablenotif.gd" id="10_sv73n"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jryfu"]
 friction = 0.0
@@ -807,9 +813,65 @@ absorbent = true
 [sub_resource type="CircleShape2D" id="CircleShape2D_i4skc"]
 radius = 17.117243
 
+[sub_resource type="Gradient" id="Gradient_woq0j"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 0.39215687)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jryfu"]
+gradient = SubResource("Gradient_woq0j")
+
+[sub_resource type="SystemFont" id="SystemFont_ogrcx"]
+font_names = PackedStringArray("Rockwell")
+font_italic = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_mrpvw"]
+font = SubResource("SystemFont_ogrcx")
+font_size = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_woq0j"]
+bg_color = Color(0.103743516, 0.103743546, 0.10374347, 0.61960787)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jryfu"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_detail = 20
+
+[sub_resource type="Gradient" id="Gradient_ufhab"]
+colors = PackedColorArray(0, 0, 0, 1, 0.24840015, 0.24840018, 0.24840015, 0.41960785)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_qi0jn"]
+gradient = SubResource("Gradient_ufhab")
+
+[sub_resource type="SystemFont" id="SystemFont_sv73n"]
+font_names = PackedStringArray("Rockwell")
+
+[sub_resource type="LabelSettings" id="LabelSettings_qn0cm"]
+font = SubResource("SystemFont_sv73n")
+font_size = 54
+
 [node name="Pool_game" type="Node2D" unique_id=626447976]
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=631425298]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(575.99994, 324.00003)
+scale = Vector2(1.8000001, 2.0250003)
+texture = ExtResource("1_ufhab")
+
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1107427880]
+top_level = true
 position = Vector2(833.00006, -124.99999)
 rotation = 1.5707964
 scale = Vector2(1.2, 1.1)
@@ -818,10 +880,14 @@ tile_set = SubResource("TileSet_i4skc")
 
 [node name="balls" parent="." unique_id=1683868117 instance=ExtResource("2_gqlua")]
 unique_name_in_owner = true
+top_level = true
+light_mask = 2
+visibility_layer = 2
 position = Vector2(568, 262)
 rotation = 3.1415927
 
-[node name="hitball" parent="." unique_id=1528913986 instance=ExtResource("3_i4skc")]
+[node name="hitball" parent="." unique_id=1528913986 groups=["starters"] instance=ExtResource("3_i4skc")]
+top_level = true
 position = Vector2(568, 430)
 mass = 0.5
 physics_material_override = SubResource("PhysicsMaterial_woq0j")
@@ -853,3 +919,71 @@ shape = SubResource("CircleShape2D_i4skc")
 [node name="6" type="CollisionShape2D" parent="out" unique_id=506304912]
 position = Vector2(280, -455)
 shape = SubResource("CircleShape2D_i4skc")
+
+[node name="Control" type="Control" parent="." unique_id=1095112795]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control" unique_id=133892830]
+
+[node name="TextureRect" type="TextureRect" parent="Control/CanvasLayer" unique_id=1023251898 groups=["starters"]]
+offset_right = 1155.0
+offset_bottom = 644.0
+texture = SubResource("GradientTexture2D_jryfu")
+script = ExtResource("5_ogrcx")
+
+[node name="Label" type="Label" parent="Control/CanvasLayer" unique_id=1185230012 groups=["starters"]]
+offset_right = 1152.0
+offset_bottom = 650.0
+text = "Its Just 8Ball
+
+
+"
+label_settings = SubResource("LabelSettings_mrpvw")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("6_mrpvw")
+
+[node name="startB" type="Button" parent="Control/CanvasLayer" unique_id=1215033188]
+offset_left = 529.0
+offset_top = 318.0
+offset_right = 610.0
+offset_bottom = 349.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_woq0j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jryfu")
+action_mode = 0
+text = "Local 1V1"
+script = ExtResource("5_jryfu")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="Control" unique_id=507344741]
+
+[node name="Control" type="Control" parent="Control/CanvasLayer2" unique_id=1775441203]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control/CanvasLayer2/Control" unique_id=246680271 groups=["notification"]]
+layout_mode = 0
+offset_left = -56.228153
+offset_top = 592.7716
+offset_right = 1284.6338
+offset_bottom = 705.6104
+rotation = -0.4785881
+texture = SubResource("GradientTexture1D_qi0jn")
+script = ExtResource("9_qi0jn")
+
+[node name="Label" type="Label" parent="Control/CanvasLayer2/Control" unique_id=356533046 groups=["notification"]]
+layout_mode = 0
+offset_left = 429.0
+offset_top = 365.99997
+offset_right = 755.0
+offset_bottom = 430.99997
+rotation = -0.47822022
+text = "Player 1 Turn"
+label_settings = SubResource("LabelSettings_qn0cm")
+script = ExtResource("10_sv73n")
+
+[connection signal="pressed" from="Control/CanvasLayer/startB" to="Control/CanvasLayer/startB" method="_on_pressed"]
