@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://bwwofod46xxga" path="res://texture_rect.gd" id="5_ogrcx"]
 [ext_resource type="Script" uid="uid://c6n31w0o4axw1" path="res://starttitle.gd" id="6_mrpvw"]
 [ext_resource type="Script" uid="uid://cdmanwry6nv8b" path="res://notif.gd" id="9_qi0jn"]
+[ext_resource type="Texture2D" uid="uid://dgij5ka3whdn2" path="res://notifbanner.png" id="9_qn0cm"]
 [ext_resource type="Script" uid="uid://dy157owxmarn6" path="res://Lablenotif.gd" id="10_sv73n"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jryfu"]
@@ -848,12 +849,6 @@ border_color = Color(0, 0, 0, 1)
 border_blend = true
 corner_detail = 20
 
-[sub_resource type="Gradient" id="Gradient_ufhab"]
-colors = PackedColorArray(0, 0, 0, 1, 0.24840015, 0.24840018, 0.24840015, 0.41960785)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_qi0jn"]
-gradient = SubResource("Gradient_ufhab")
-
 [sub_resource type="SystemFont" id="SystemFont_sv73n"]
 font_names = PackedStringArray("Rockwell")
 
@@ -883,10 +878,11 @@ unique_name_in_owner = true
 top_level = true
 light_mask = 2
 visibility_layer = 2
-position = Vector2(568, 262)
+position = Vector2(568, 202)
 rotation = 3.1415927
 
 [node name="hitball" parent="." unique_id=1528913986 groups=["starters"] instance=ExtResource("3_i4skc")]
+unique_name_in_owner = true
 top_level = true
 position = Vector2(568, 430)
 mass = 0.5
@@ -965,23 +961,23 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TextureRect" type="TextureRect" parent="Control/CanvasLayer2/Control" unique_id=246680271 groups=["notification"]]
-layout_mode = 0
-offset_left = -56.228153
-offset_top = 592.7716
-offset_right = 1284.6338
-offset_bottom = 705.6104
-rotation = -0.4785881
-texture = SubResource("GradientTexture1D_qi0jn")
+[node name="TextureRect" type="Sprite2D" parent="Control/CanvasLayer2/Control" unique_id=1857702987 groups=["notification"]]
+position = Vector2(581, 325)
+scale = Vector2(10, 5)
+texture = ExtResource("9_qn0cm")
 script = ExtResource("9_qi0jn")
 
 [node name="Label" type="Label" parent="Control/CanvasLayer2/Control" unique_id=356533046 groups=["notification"]]
-layout_mode = 0
-offset_left = 429.0
-offset_top = 365.99997
-offset_right = 755.0
-offset_bottom = 430.99997
-rotation = -0.47822022
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 28.849
+anchor_bottom = 16.105001
+offset_left = 400.0
+offset_top = 290.0
+offset_right = -427.96008
+offset_bottom = -289.20007
+grow_horizontal = 2
+grow_vertical = 2
 text = "Player 1 Turn"
 label_settings = SubResource("LabelSettings_qn0cm")
 script = ExtResource("10_sv73n")

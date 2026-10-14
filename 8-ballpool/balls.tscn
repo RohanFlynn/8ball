@@ -1,5 +1,6 @@
-[gd_scene load_steps=32 format=3 uid="uid://dsj8d5j50vhl1"]
+[gd_scene format=3 uid="uid://dsj8d5j50vhl1"]
 
+[ext_resource type="Script" uid="uid://d0y74ln257wmc" path="res://ball.gd" id="1_0ystb"]
 [ext_resource type="Texture2D" uid="uid://byqtxy4lfsdhg" path="res://Balls1.png" id="1_tger7"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tger7"]
@@ -107,10 +108,10 @@ bounce = 0.65
 [sub_resource type="CircleShape2D" id="CircleShape2D_7jwt4"]
 radius = 15.0
 
-[node name="balls" type="Node2D"]
+[node name="balls" type="Node2D" unique_id=592332707]
 position = Vector2(332, 121)
 
-[node name="1ball" type="RigidBody2D" parent="."]
+[node name="1ball" type="RigidBody2D" parent="." unique_id=82667540 groups=["Ball"]]
 position = Vector2(0, 2)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_tger7")
@@ -119,19 +120,20 @@ can_sleep = false
 freeze_mode = 1
 linear_damp = 0.5
 angular_damp = 1.0
+script = ExtResource("1_0ystb")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="1ball"]
+[node name="Sprite2D" type="Sprite2D" parent="1ball" unique_id=1888103334]
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_tger7")
 region_enabled = true
 region_rect = Rect2(0, 0, 32, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="1ball"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="1ball" unique_id=1174438372]
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_0ystb")
 
-[node name="2ball" type="RigidBody2D" parent="."]
+[node name="2ball" type="RigidBody2D" parent="." unique_id=914625434 groups=["Ball"]]
 position = Vector2(-11, 21)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_0ystb")
@@ -140,19 +142,20 @@ can_sleep = false
 freeze_mode = 1
 linear_damp = 0.5
 angular_damp = 1.0
+script = ExtResource("1_0ystb")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="2ball"]
+[node name="Sprite2D" type="Sprite2D" parent="2ball" unique_id=1363419118]
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_tger7")
 region_enabled = true
 region_rect = Rect2(32, 0, 32, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="2ball"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2ball" unique_id=571514412]
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_ru48t")
 
-[node name="1ballstriped" type="RigidBody2D" parent="."]
+[node name="1ballstriped" type="RigidBody2D" parent="." unique_id=2129417988 groups=["Ball"]]
 position = Vector2(11, 21)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_ru48t")
@@ -161,19 +164,20 @@ can_sleep = false
 freeze_mode = 1
 linear_damp = 0.5
 angular_damp = 0.1
+script = ExtResource("1_0ystb")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="1ballstriped"]
+[node name="Sprite2D" type="Sprite2D" parent="1ballstriped" unique_id=881899933]
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_tger7")
 region_enabled = true
 region_rect = Rect2(96, 32, 32, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="1ballstriped"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="1ballstriped" unique_id=1443791918]
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_q2ish")
 
-[node name="2ballstriped" type="RigidBody2D" parent="."]
+[node name="2ballstriped" type="RigidBody2D" parent="." unique_id=1330255195 groups=["Ball"]]
 position = Vector2(-22, 40)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_q2ish")
@@ -182,19 +186,20 @@ can_sleep = false
 freeze_mode = 1
 linear_damp = 0.5
 angular_damp = 0.1
+script = ExtResource("1_0ystb")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="2ballstriped"]
+[node name="Sprite2D" type="Sprite2D" parent="2ballstriped" unique_id=1552486237]
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_tger7")
 region_enabled = true
 region_rect = Rect2(128, 32, 32, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="2ballstriped"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2ballstriped" unique_id=637382241]
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_tger7")
 
-[node name="8ball" type="RigidBody2D" parent="."]
+[node name="8ball" type="RigidBody2D" parent="." unique_id=1891490374 groups=["Ball"]]
 position = Vector2(0, 40)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_00gfa")
@@ -203,19 +208,20 @@ can_sleep = false
 freeze_mode = 1
 linear_damp = 0.1
 angular_damp = 0.5
+script = ExtResource("1_0ystb")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="8ball"]
+[node name="Sprite2D" type="Sprite2D" parent="8ball" unique_id=530841218]
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_tger7")
 region_enabled = true
 region_rect = Rect2(64, 32, 32, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="8ball"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="8ball" unique_id=488962249]
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_00gfa")
 
-[node name="3ball" type="RigidBody2D" parent="."]
+[node name="3ball" type="RigidBody2D" parent="." unique_id=1385314710 groups=["Ball"]]
 position = Vector2(22, 40)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_wd4np")
@@ -224,19 +230,20 @@ can_sleep = false
 freeze_mode = 1
 linear_damp = 0.1
 angular_damp = 0.5
+script = ExtResource("1_0ystb")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="3ball"]
+[node name="Sprite2D" type="Sprite2D" parent="3ball" unique_id=291582593]
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_tger7")
 region_enabled = true
 region_rect = Rect2(64, 0, 32, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="3ball"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="3ball" unique_id=515348271]
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_wd4np")
 
-[node name="3ballstriped" type="RigidBody2D" parent="."]
+[node name="3ballstriped" type="RigidBody2D" parent="." unique_id=889329624 groups=["Ball"]]
 position = Vector2(-33, 59)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_xewfi")
@@ -245,19 +252,20 @@ can_sleep = false
 freeze_mode = 1
 linear_damp = 0.5
 angular_damp = 0.1
+script = ExtResource("1_0ystb")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="3ballstriped"]
+[node name="Sprite2D" type="Sprite2D" parent="3ballstriped" unique_id=1546151097]
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_tger7")
 region_enabled = true
 region_rect = Rect2(0, 64, 32, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="3ballstriped"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="3ballstriped" unique_id=959668901]
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_xewfi")
 
-[node name="4ball" type="RigidBody2D" parent="."]
+[node name="4ball" type="RigidBody2D" parent="." unique_id=2057895299 groups=["Ball"]]
 position = Vector2(-11, 59)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_mk0oh")
@@ -266,19 +274,20 @@ can_sleep = false
 freeze_mode = 1
 linear_damp = 0.1
 angular_damp = 0.5
+script = ExtResource("1_0ystb")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="4ball"]
+[node name="Sprite2D" type="Sprite2D" parent="4ball" unique_id=289885471]
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_tger7")
 region_enabled = true
 region_rect = Rect2(96, 0, 32, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="4ball"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="4ball" unique_id=1791173756]
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_mk0oh")
 
-[node name="4ballstriped" type="RigidBody2D" parent="."]
+[node name="4ballstriped" type="RigidBody2D" parent="." unique_id=2136796347 groups=["Ball"]]
 position = Vector2(11, 59)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_fea17")
@@ -287,19 +296,20 @@ can_sleep = false
 freeze_mode = 1
 linear_damp = 0.5
 angular_damp = 0.1
+script = ExtResource("1_0ystb")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="4ballstriped"]
+[node name="Sprite2D" type="Sprite2D" parent="4ballstriped" unique_id=544081452]
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_tger7")
 region_enabled = true
 region_rect = Rect2(32, 64, 32, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="4ballstriped"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="4ballstriped" unique_id=1144268261]
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_fea17")
 
-[node name="5ball" type="RigidBody2D" parent="."]
+[node name="5ball" type="RigidBody2D" parent="." unique_id=1366111215 groups=["Ball"]]
 position = Vector2(33, 59)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_pdigv")
@@ -308,19 +318,20 @@ can_sleep = false
 freeze_mode = 1
 linear_damp = 0.1
 angular_damp = 0.1
+script = ExtResource("1_0ystb")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="5ball"]
+[node name="Sprite2D" type="Sprite2D" parent="5ball" unique_id=1368791146]
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_tger7")
 region_enabled = true
 region_rect = Rect2(128, 0, 32, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="5ball"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="5ball" unique_id=1395898814]
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_pdigv")
 
-[node name="5ballstriped" type="RigidBody2D" parent="."]
+[node name="5ballstriped" type="RigidBody2D" parent="." unique_id=1179225355 groups=["Ball"]]
 position = Vector2(-44, 78)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_hgt4v")
@@ -329,19 +340,20 @@ can_sleep = false
 freeze_mode = 1
 linear_damp = 0.5
 angular_damp = 0.1
+script = ExtResource("1_0ystb")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="5ballstriped"]
+[node name="Sprite2D" type="Sprite2D" parent="5ballstriped" unique_id=1071394838]
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_tger7")
 region_enabled = true
 region_rect = Rect2(64, 64, 32, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="5ballstriped"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="5ballstriped" unique_id=1253694397]
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_hgt4v")
 
-[node name="6ball" type="RigidBody2D" parent="."]
+[node name="6ball" type="RigidBody2D" parent="." unique_id=406280129 groups=["Ball"]]
 position = Vector2(-22, 78)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_ure6q")
@@ -350,19 +362,20 @@ can_sleep = false
 freeze_mode = 1
 linear_damp = 0.5
 angular_damp = 0.1
+script = ExtResource("1_0ystb")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="6ball"]
+[node name="Sprite2D" type="Sprite2D" parent="6ball" unique_id=1893110283]
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_tger7")
 region_enabled = true
 region_rect = Rect2(0, 32, 32, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="6ball"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="6ball" unique_id=423969735]
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_ure6q")
 
-[node name="6ballstriped" type="RigidBody2D" parent="."]
+[node name="6ballstriped" type="RigidBody2D" parent="." unique_id=636784421 groups=["Ball"]]
 position = Vector2(0, 78)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_iqxf3")
@@ -371,20 +384,21 @@ can_sleep = false
 freeze_mode = 1
 linear_damp = 0.5
 angular_damp = 0.1
+script = ExtResource("1_0ystb")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="6ballstriped"]
+[node name="Sprite2D" type="Sprite2D" parent="6ballstriped" unique_id=1232164257]
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_tger7")
 region_enabled = true
 region_rect = Rect2(96, 64, 32, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="6ballstriped"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="6ballstriped" unique_id=1348874553]
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_iqxf3")
 
-[node name="7ball" type="RigidBody2D" parent="."]
-position = Vector2(22, 78)
+[node name="7ball" type="RigidBody2D" parent="." unique_id=1998718355 groups=["Ball"]]
+position = Vector2(44, 78)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_tmleo")
 gravity_scale = 0.0
@@ -392,20 +406,21 @@ can_sleep = false
 freeze_mode = 1
 linear_damp = 0.5
 angular_damp = 0.1
+script = ExtResource("1_0ystb")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="7ball"]
+[node name="Sprite2D" type="Sprite2D" parent="7ball" unique_id=1956996809]
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_tger7")
 region_enabled = true
 region_rect = Rect2(32, 32, 32, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="7ball"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="7ball" unique_id=1741966643]
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_tmleo")
 
-[node name="7ballstriped" type="RigidBody2D" parent="."]
-position = Vector2(44, 78)
+[node name="7ballstriped" type="RigidBody2D" parent="." unique_id=1230864512 groups=["Ball"]]
+position = Vector2(22, 78)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_7jwt4")
 gravity_scale = 0.0
@@ -413,14 +428,15 @@ can_sleep = false
 freeze_mode = 1
 linear_damp = 0.5
 angular_damp = 1.0
+script = ExtResource("1_0ystb")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="7ballstriped"]
+[node name="Sprite2D" type="Sprite2D" parent="7ballstriped" unique_id=1395550379]
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_tger7")
 region_enabled = true
 region_rect = Rect2(128, 64, 32, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="7ballstriped"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="7ballstriped" unique_id=2062571593]
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_7jwt4")

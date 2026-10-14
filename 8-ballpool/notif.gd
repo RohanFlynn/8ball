@@ -1,4 +1,4 @@
-extends Control
+extends Sprite2D
 
 var notif = false
 
@@ -11,9 +11,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if notif:
-		if scale.x <= 1:
-			scale.x += 0.01
-			scale.y += 0.01
+		if scale.x <= 10:
+			scale.x += 0.1
+			scale.y += 0.05
 		else:
 			await get_tree().create_timer(2.0).timeout
 			notif = false

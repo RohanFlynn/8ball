@@ -42,11 +42,11 @@ width_curve = SubResource("Curve_w87mi")
 default_color = Color(1, 0, 0, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=382528160]
-scale = Vector2(0.7, 0.7)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_ivl1m")
 region_enabled = true
 region_rect = Rect2(64, 96, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1623682022]
-scale = Vector2(0.7, 0.7)
+scale = Vector2(0.6, 0.6)
 shape = SubResource("CircleShape2D_w87mi")

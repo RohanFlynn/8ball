@@ -11,25 +11,40 @@ var player = GameData.player
 var shown = false
 @onready var line: Line2D = $powerline
 @onready var line2: Line2D = $Line2D
+var able = true
+var v = 0.0
+var l = 0.0
+@onready var before_shot
 
+func _ready() -> void:
+	before_shot = global_position
+	
 func _physics_process(delta: float) -> void:
 	if cancan:
-		if linear_velocity.length() < 1.0:
-			if player == 0 and can == false:
-				GameData.player = 1
-				player = GameData.player
-			elif player == 1 and can == false:
-				GameData.player = 0
-				player = GameData.player
-			if not shown:
+		if not able:
+			var b = get_tree().get_nodes_in_group("Ball")
+			var m = get_moving_balls(b)
+			# This ball AND every other ball has stopped
+			if linear_velocity.length() < 3.0 and m.is_empty():
+				able = true
+				if player == 0:
+					GameData.player1moves -= 1
+					if GameData.player1moves <= 0:
+						GameData.player = 1
+						player = GameData.player
+						GameData.player2moves = 1
+				elif player == 1:
+					GameData.player2moves -= 1
+					if GameData.player2moves <= 0:
+						GameData.player = 0
+						player = GameData.player
+						GameData.player1moves = 1
 				get_tree().call_group("notification", "notify", player)
 				shown = true
-			can = true
-		else:
-			can = false
+				can = true
 		if aiming:
 			line.points[1] = get_local_mouse_position()
-			line2.points[1] = (get_local_mouse_position() * -1)
+			line2.points[1] = get_local_mouse_position() * -1
 		elif bshot:
 			line2.points[1] = Vector2(0, 0)
 			if line.points[1].length() > 1:
@@ -41,7 +56,7 @@ func _physics_process(delta: float) -> void:
 					shootball(mp)
 
 func _input(event):
-	if cancan:
+	if cancan and able:
 		if event is InputEventMouseButton:
 			if event.button_index == MOUSE_BUTTON_LEFT:
 				if event.pressed and can:
@@ -49,6 +64,7 @@ func _input(event):
 						aiming = true
 				else:
 					if aiming:
+						before_shot = global_position
 						aiming = false
 						bshot = true
 						lp = line.points[1]
@@ -57,10 +73,22 @@ func _input(event):
 func shootball(mp):
 	shot = false
 	bshot = false
-	var direction = global_position - mp
+	able = false
+	var direction = (global_position - mp) / 1.5
 	apply_central_impulse(direction)
 	get_tree().call_group("stick", "rel", global_position)
 	shown = false
 
 func start():
 	cancan = true
+
+func get_moving_balls(balls):
+	var moving = []
+	for ball in balls:
+		if ball.hit == true:
+			moving.append(ball)
+	return moving
+
+func leave():
+	global_position = before_shot
+	linear_velocity = Vector2(0, 0)
