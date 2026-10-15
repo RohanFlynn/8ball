@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://c003vnh5bhg8i"]
 
+[ext_resource type="Script" uid="uid://cr0iw3djddfoa" path="res://pool_game.gd" id="1_fxjw5"]
 [ext_resource type="Texture2D" uid="uid://n05jxr5rfh3w" path="res://Table and Cue Stick.png" id="1_hrwhm"]
 [ext_resource type="Texture2D" uid="uid://drvp6x377ifhw" path="res://poolbg.png" id="1_ufhab"]
 [ext_resource type="PackedScene" uid="uid://dsj8d5j50vhl1" path="res://balls.tscn" id="2_gqlua"]
@@ -856,7 +857,8 @@ font_names = PackedStringArray("Rockwell")
 font = SubResource("SystemFont_sv73n")
 font_size = 54
 
-[node name="Pool_game" type="Node2D" unique_id=626447976]
+[node name="Pool_game" type="Node2D" unique_id=626447976 groups=["game"]]
+script = ExtResource("1_fxjw5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=631425298]
 light_mask = 2

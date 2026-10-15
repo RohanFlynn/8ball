@@ -15,7 +15,7 @@ var able = true
 var v = 0.0
 var l = 0.0
 @onready var before_shot
-
+var left = false
 func _ready() -> void:
 	before_shot = global_position
 	
@@ -27,6 +27,12 @@ func _physics_process(delta: float) -> void:
 			# This ball AND every other ball has stopped
 			if linear_velocity.length() < 3.0 and m.is_empty():
 				able = true
+				show()
+				if GameData.foul:
+					if player == 0:
+						GameData.player1moves += 1
+					elif player == 1:
+						GameData.player2moves += 1
 				if player == 0:
 					GameData.player1moves -= 1
 					if GameData.player1moves <= 0:
@@ -90,5 +96,7 @@ func get_moving_balls(balls):
 	return moving
 
 func leave():
+	hide()
 	global_position = before_shot
 	linear_velocity = Vector2(0, 0)
+	

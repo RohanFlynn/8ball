@@ -111,7 +111,7 @@ radius = 15.0
 [node name="balls" type="Node2D" unique_id=592332707]
 position = Vector2(332, 121)
 
-[node name="1ball" type="RigidBody2D" parent="." unique_id=82667540 groups=["Ball"]]
+[node name="1ball" type="RigidBody2D" parent="." unique_id=82667540 groups=["Ball", "b"]]
 position = Vector2(0, 2)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_tger7")
@@ -133,7 +133,7 @@ region_rect = Rect2(0, 0, 32, 32)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_0ystb")
 
-[node name="2ball" type="RigidBody2D" parent="." unique_id=914625434 groups=["Ball"]]
+[node name="2ball" type="RigidBody2D" parent="." unique_id=914625434 groups=["Ball", "b"]]
 position = Vector2(-11, 21)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_0ystb")
@@ -155,7 +155,7 @@ region_rect = Rect2(32, 0, 32, 32)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_ru48t")
 
-[node name="1ballstriped" type="RigidBody2D" parent="." unique_id=2129417988 groups=["Ball"]]
+[node name="1ballstriped" type="RigidBody2D" parent="." unique_id=2129417988 groups=["Ball", "s"]]
 position = Vector2(11, 21)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_ru48t")
@@ -177,7 +177,7 @@ region_rect = Rect2(96, 32, 32, 32)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_q2ish")
 
-[node name="2ballstriped" type="RigidBody2D" parent="." unique_id=1330255195 groups=["Ball"]]
+[node name="2ballstriped" type="RigidBody2D" parent="." unique_id=1330255195 groups=["Ball", "s"]]
 position = Vector2(-22, 40)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_q2ish")
@@ -199,7 +199,7 @@ region_rect = Rect2(128, 32, 32, 32)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_tger7")
 
-[node name="8ball" type="RigidBody2D" parent="." unique_id=1891490374 groups=["Ball"]]
+[node name="8ball" type="RigidBody2D" parent="." unique_id=1891490374 groups=["8ball", "Ball"]]
 position = Vector2(0, 40)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_00gfa")
@@ -221,7 +221,7 @@ region_rect = Rect2(64, 32, 32, 32)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_00gfa")
 
-[node name="3ball" type="RigidBody2D" parent="." unique_id=1385314710 groups=["Ball"]]
+[node name="3ball" type="RigidBody2D" parent="." unique_id=1385314710 groups=["Ball", "b"]]
 position = Vector2(22, 40)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_wd4np")
@@ -243,7 +243,7 @@ region_rect = Rect2(64, 0, 32, 32)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_wd4np")
 
-[node name="3ballstriped" type="RigidBody2D" parent="." unique_id=889329624 groups=["Ball"]]
+[node name="3ballstriped" type="RigidBody2D" parent="." unique_id=889329624 groups=["Ball", "s"]]
 position = Vector2(-33, 59)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_xewfi")
@@ -265,7 +265,7 @@ region_rect = Rect2(0, 64, 32, 32)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_xewfi")
 
-[node name="4ball" type="RigidBody2D" parent="." unique_id=2057895299 groups=["Ball"]]
+[node name="4ball" type="RigidBody2D" parent="." unique_id=2057895299 groups=["Ball", "b"]]
 position = Vector2(-11, 59)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_mk0oh")
@@ -287,7 +287,7 @@ region_rect = Rect2(96, 0, 32, 32)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_mk0oh")
 
-[node name="4ballstriped" type="RigidBody2D" parent="." unique_id=2136796347 groups=["Ball"]]
+[node name="4ballstriped" type="RigidBody2D" parent="." unique_id=2136796347 groups=["Ball", "s"]]
 position = Vector2(11, 59)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_fea17")
@@ -309,7 +309,7 @@ region_rect = Rect2(32, 64, 32, 32)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_fea17")
 
-[node name="5ball" type="RigidBody2D" parent="." unique_id=1366111215 groups=["Ball"]]
+[node name="5ball" type="RigidBody2D" parent="." unique_id=1366111215 groups=["Ball", "b"]]
 position = Vector2(33, 59)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_pdigv")
@@ -331,7 +331,7 @@ region_rect = Rect2(128, 0, 32, 32)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_pdigv")
 
-[node name="5ballstriped" type="RigidBody2D" parent="." unique_id=1179225355 groups=["Ball"]]
+[node name="5ballstriped" type="RigidBody2D" parent="." unique_id=1179225355 groups=["Ball", "s"]]
 position = Vector2(-44, 78)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_hgt4v")
@@ -353,7 +353,7 @@ region_rect = Rect2(64, 64, 32, 32)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_hgt4v")
 
-[node name="6ball" type="RigidBody2D" parent="." unique_id=406280129 groups=["Ball"]]
+[node name="6ball" type="RigidBody2D" parent="." unique_id=406280129 groups=["Ball", "b"]]
 position = Vector2(-22, 78)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_ure6q")
@@ -375,7 +375,7 @@ region_rect = Rect2(0, 32, 32, 32)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_ure6q")
 
-[node name="6ballstriped" type="RigidBody2D" parent="." unique_id=636784421 groups=["Ball"]]
+[node name="6ballstriped" type="RigidBody2D" parent="." unique_id=636784421 groups=["Ball", "s"]]
 position = Vector2(0, 78)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_iqxf3")
@@ -397,7 +397,7 @@ region_rect = Rect2(96, 64, 32, 32)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_iqxf3")
 
-[node name="7ball" type="RigidBody2D" parent="." unique_id=1998718355 groups=["Ball"]]
+[node name="7ball" type="RigidBody2D" parent="." unique_id=1998718355 groups=["Ball", "b"]]
 position = Vector2(44, 78)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_tmleo")
@@ -419,7 +419,7 @@ region_rect = Rect2(32, 32, 32, 32)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_tmleo")
 
-[node name="7ballstriped" type="RigidBody2D" parent="." unique_id=1230864512 groups=["Ball"]]
+[node name="7ballstriped" type="RigidBody2D" parent="." unique_id=1230864512 groups=["Ball", "s"]]
 position = Vector2(22, 78)
 mass = 0.17
 physics_material_override = SubResource("PhysicsMaterial_7jwt4")

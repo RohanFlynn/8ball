@@ -30,3 +30,21 @@ func _process(delta: float) -> void:
 
 func leave():
 	leaving = true
+	if GameData.player == 0 and GameData.player1ball == 0:
+		if is_in_group("b"):
+			GameData.player1ball = 1
+		else:
+			GameData.player1ball = 2
+		print("player 1 ball is: ", GameData.player1ball)
+	elif GameData.player == 1 and GameData.player2ball == 0:
+		if is_in_group("s"):
+			GameData.player2ball = 1
+		else:
+			GameData.player2ball = 2
+		print("player 2 ball is: ", GameData.player2ball)
+	if is_in_group("b") and GameData.player1ball or GameData.player2ball == 2:
+		print("player put not-striped ball when they wernt suposed to")
+		GameData.foul = true
+	elif is_in_group("s") and GameData.player1ball or GameData.player2ball == 1:
+		print("player put striped ball when they wernt suposed to")
+		GameData.foul = true
